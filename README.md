@@ -63,16 +63,29 @@ Notations des touristes
 ⭐ Donner une note ou un avis après la visite
 
 🏗️ Architecture du projet (Dockerisé)
-bash
-Copier
-Modifier
-📦 travel-paradise/
+
+travel-paradise/
+├── backend/
+│   ├── Dockerfile
+│   ├── src/
+│   │   ├── Controller/
+│   │   ├── Entity/
+│   │   │   ├── Guide.php
+│   │   │   ├── Visite.php
+│   │   │   └── Utilisateur.php
+│   ├── config/
+│   ├── migrations/
+│   └── composer.json
 │
-├── backend/               → API Symfony (PHP)
-│   └── Dockerfile
+├── frontend/
+│   ├── Dockerfile
+│   ├── App.js (ou App.tsx si TypeScript)
+│   ├── screens/
+│   │   ├── Admin/
+│   │   ├── Guide/
+│   │   └── Visiteur/
+│   ├── components/
+│   └── package.json
 │
-├── frontend/              → App mobile React Native (Expo)
-│   └── Dockerfile
-│
-├── docker-compose.yml    → Orchestration des services
-└── README.md              → Présentation du projet
+├── docker-compose.yml
+└── README.md
